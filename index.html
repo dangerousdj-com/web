@@ -6,17 +6,10 @@
 
 
 
-<script>
-const element = document.querySelector('div');
 
-element.addEventListener('touchstart', (e) => {
-    // prevent swipe to navigate gesture
-    e.preventDefault();
-});
-</script>
 
 <title>DJ Dangerous Raj Desai - Album 5 for $19.99 on Google Play, Bandcamp, Juno Download, and more</title>
-<style type="text/css">
+<style>
 body {
    
 	background-color: #4e3e31;
@@ -47,10 +40,16 @@ body {
 	color: #000;
 	margin: auto;
 	width: 480px;
-	position:relative;
+	
 	z-index: 9999999;
 	background-attachment: fixed;
- 
+  position: fixed; 
+  right: 0; 
+  bottom: 0; 
+  left: 0;
+  top: 0;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
 }
 </style>
 <style>
@@ -82,7 +81,6 @@ body {
 
 </style>
 
-
 </head>
 
 <body>
@@ -91,15 +89,30 @@ body {
 <a href="game/index.html" target="_parent" class="button1001">Switch to Fullscreen Game</a>
 </center>
 
-<center>
-<div id="GAMEcontent">
-    <div id="game">
-    <iframe frameborder="0" src="game/index.html" width="480px" height="720px"></iframe>
+
+<div id="GAMEcontent" >
+    <div id="game" class="game">
+    <iframe frameborder="0" src="game/index.html" min-width="480px" min-height="720px"></iframe>
     </div>
 </div>
-</center>
 
 
+<style>
+.game {
+  position: fixed; 
+  right: 0; 
+  bottom: 0; 
+  left: 0;
+  top: 0;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
+}
+
+.game iframe {
+  height: 100%;
+  width: 100%;
+}
+</style>
 
 </body>
 </html>
