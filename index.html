@@ -1,15 +1,21 @@
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta name="viewport" content="initial-scale=0.3, maximum-scale=0.3, minimum-scale=0.3, user-scalable=no, minimal-ui" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
+<div style="height:100px">Our element that prevents navigation</div>
 
+<script>
+const element = document.querySelector('div');
 
-
+element.addEventListener('touchstart', (e) => {
+    // prevent swipe to navigate gesture
+    e.preventDefault();
+});
+</script>
 
 <title>DJ Dangerous Raj Desai - Album 5 for $19.99 on Google Play, Bandcamp, Juno Download, and more</title>
-<style>
+<style type="text/css">
 body {
    
 	background-color: #4e3e31;
@@ -17,38 +23,29 @@ body {
 	margin-top: 0px;
 	margin-right: 0px;
 	margin-bottom: 0px;
-	background-image:url(bg3.jpg); 
+	background-image:url(bg3.jpg);
 	background-position: center top;
 	background-repeat:no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
-	 
 }
 #GAMEcontent{
 	margin-top: 60px;
 	margin-bottom: 60px;
 	position:relative;
 	background-attachment: fixed;
- 
 	
 }
 #game {
-	border-style:none;
-	border-width: 0px;
+	border-style:solid;
+	border-width: 10px;
 	border-color:#000;
 	color: #000;
-	margin: 0 0 0 0;
-
-	
+	margin: auto;
+	width: 480px;
+	position:relative;
 	z-index: 9999999;
-	background-attachment: fixed;
-  position: fixed; 
-  right: 0; 
-  bottom: 0; 
-  left: 0;
-  top: 0;
-  -webkit-overflow-scrolling: touch;
-  overflow-y: hidden;
+	  background-attachment: fixed; 
 }
 </style>
 <style>
@@ -80,40 +77,24 @@ body {
 
 </style>
 
+
 </head>
 
 <body>
 
+
+
+<center>
+<div id="GAMEcontent">
+    <div id="game">
+    <iframe frameborder="0" src="game/index.html" width="480px" height="720px"></iframe>
+    </div>
+</div>
+</center>
+
 <center>
 <a href="game/index.html" target="_parent" class="button1001">Switch to Fullscreen Game</a>
 </center>
-
-
-<div id="GAMEcontent" >
-    <div id="game" class="game">
-    <iframe frameborder="0" src="game/index.html" min-width="100%" min-height="100%"></iframe>
-    
-<iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1134491842&color=%230bac33&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/djdangerousmusic" title="dj dangerous raj desai" target="_blank" style="color: #cccccc; text-decoration: none;">dj dangerous raj desai</a> · <a href="https://soundcloud.com/djdangerousmusic/sets/bestnewdancemusic2020bestnewhousemusic2021edm2021" title="www.dangerousdj.com - Best EDM 2020 202 1 Best House Music 2020 2021 Best Dance Music 2020 2021" target="_blank" style="color: #cccccc; text-decoration: none;">www.dangerousdj.com - Best EDM 2020 2021 Best House Music 2020 2021 Best Dance Music 2020 2021</a></div>
-
-    </div>
-</div>
-
-<style>
-.game {
-  position: fixed; 
-  right: 0; 
-  bottom: 0; 
-  left: 0;
-  top: 0;
-  -webkit-overflow-scrolling: touch;
-  overflow-y: scroll;
-}
-
-.game iframe {
-  height: 100%;
-  width: 100%;
-}
-</style>
 
 </body>
 </html>
