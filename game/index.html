@@ -1,117 +1,105 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+﻿<!DOCTYPE html>
+<html manifest="offline.appcache">
 <head>
-<meta name="viewport" content="initial-scale=0.1, maximum-scale=0.1, minimum-scale=0.1, user-scalable=no, minimal-ui" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-
-
-
-
-<title>DJ Dangerous Raj Desai - Album 5 for $19.99 on Google Play, Bandcamp, Juno Download, and more</title>
-<style>
-body {
-   
-	background-color: #4e3e31;
-	margin-left: 0px;
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-	background-image:url(bg3.jpg); 
-	background-position: center top;
-	background-repeat:no-repeat;
-	background-size: cover;
-	background-attachment: fixed;
-	 
-}
-#GAMEcontent{
-	margin-top: 60px;
-	margin-bottom: 60px;
-	position:relative;
-	background-attachment: fixed;
- 
+    <meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>www.dangerousdj.com - DJ Dangerous Raj Desai Album Puzzle Game</title>
 	
-}
-#game {
-	border-style:none;
-	border-width: 0px;
-	border-color:#000;
-	color: #000;
-	margin: 0 0 0 0;
-  z-index: 9999999;
-	background-attachment: fixed;
-  position: fixed; 
-  right: 0; 
-  bottom: 0; 
-  left: 0;
-  top: 0;
-  -webkit-overflow-scrolling: touch;
-  overflow-y: hidden;
-}
-</style>
-<style>
+	<!-- Allow fullscreen mode on iOS devices. (These are Apple specific meta tags.) -->
+	<meta name="viewport" content="width=device-width, initial-scale=0.1, maximum-scale=0.1, minimum-scale=0.1, user-scalable=no, minimal-ui" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<link rel="apple-touch-icon" sizes="256x256" href="icon-256.png" />
+	<meta name="HandheldFriendly" content="true" />
+	
+	<!-- Chrome for Android web app tags -->
+	<meta name="mobile-web-app-capable" content="yes" />
+	<link rel="shortcut icon" sizes="256x256" href="icon-256.png" />
 
-.button1001 {
-	box-shadow: 0px 1px 0px 0px #fff6af;
-	background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
-	background-color:#ffec64;
-	border-radius:25px;
-	border:2px solid #ffaa22;
-	display:inline-block;
-	cursor:pointer;
-	color:#333333;
-	font-family:Arial;
-	font-size:15px;
-	font-weight:bold;
-	padding:8px 8px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #ffee66;
-}
-.button1001:hover {
-	background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
-	background-color:#ffab23;
-}
-.button1001:active {
-	position:relative;
-	top:1px;
-}
+    <!-- All margins and padding must be zero for the canvas to fill the screen. -->
+	<style type="text/css">
+		* {
+			padding: 0;
+			margin: 0;
+		}
+		body {
+			background: #000;
+			color: #fff;
+			overflow: hidden;
+			-ms-touch-action: none;
+	
+		}
+		canvas {
+			touch-action-delay: none;
+			touch-action: none;
+			-ms-touch-action: none;
+			
+		}
+    </style>
+	
 
-</style>
+</head> 
+ 
+<body> 
+	
+	
+	<!-- The canvas must be inside a div called c2canvasdiv -->
+	<div id="c2canvasdiv">
+	
+		<!-- The canvas the project will render to.  If you change its ID, don't forget to change the
+		ID the runtime looks for in the jQuery events above (ready() and cr_sizeCanvas()). -->
+		<canvas id="c2canvas" width="640" height="960">
+			<!-- This text is displayed if the visitor's browser does not support HTML5.
+			You can change it, but it is a good idea to link to a description of a browser
+			and provide some links to download some popular HTML5-compatible browsers. -->
+			<h1>Dude!! turn your javascipt and cookies on so you can play beeeaaatch Try upgrading your browser to the latest version.  <a href="http://www.whatbrowser.org">What is a browser?</a>
+			<br/><br/><a href="http://www.microsoft.com/windows/internet-explorer/default.aspx">Microsoft Internet Explorer</a><br/>
+			<a href="http://www.mozilla.com/firefox/">Mozilla Firefox</a><br/>
+			<a href="http://www.google.com/chrome/">Google Chrome</a><br/>
+			<a href="http://www.apple.com/safari/download/">Apple Safari</a><br/>
+			<a href="http://www.google.com/chromeframe">Google Chrome Frame for Internet Explorer</a><br/></h1>
+		</canvas>
+		
+	</div>
+	
+	<!-- Pages load faster with scripts at the bottom -->
+	
+	<!-- Construct 2 exported games require jQuery. -->
+	<script src="jquery-2.0.0.min.js"></script>
 
-</head>
 
-<body>
+	
+    <!-- The runtime script.  You can rename it, but don't forget to rename the reference here as well.
+    This file will have been minified and obfuscated if you enabled "Minify script" during export. -->
+	<script src="dangerousdj.js"></script>
 
-<center>
-<a href="game/index.html" target="_parent" class="button1001">Switch to Fullscreen Game</a>
-</center>
-
-
-<div id="GAMEcontent" >
-    <div id="game" class="game">
-    <iframe frameborder="0" src="game/index.html" min-width="100%" min-height="100%"></iframe>
-    
-<iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1134491842&color=%230bac33&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/djdangerousmusic" title="dj dangerous raj desai" target="_blank" style="color: #cccccc; text-decoration: none;">dj dangerous raj desai</a> · <a href="https://soundcloud.com/djdangerousmusic/sets/bestnewdancemusic2020bestnewhousemusic2021edm2021" title="www.dangerousdj.com - Best EDM 2020 202 1 Best House Music 2020 2021 Best Dance Music 2020 2021" target="_blank" style="color: #cccccc; text-decoration: none;">www.dangerousdj.com - Best EDM 2020 2021 Best House Music 2020 2021 Best Dance Music 2020 2021</a></div>
-
-    </div>
-</div>
-
-<style>
-.game {
-  position: fixed; 
-  right: 0; 
-  bottom: 0; 
-  left: 0;
-  top: 0;
-  -webkit-overflow-scrolling: touch;
-  overflow-y: scroll;
-}
-
-.game iframe {
-  height: 100%;
-  width: 100%;
-}
-</style>
-
-</body>
-</html>
+    <script>
+		// Size the canvas to fill the browser viewport.
+		jQuery(window).resize(function() {
+			cr_sizeCanvas(jQuery(window).width(), jQuery(window).height());
+		});
+		
+		// Start the Construct 2 project running on window load.
+		jQuery(document).ready(function ()
+		{			
+			// Create new runtime using the c2canvas
+			cr_createRuntime("c2canvas");
+		});
+		
+		// Pause and resume on page becoming visible/invisible
+		function onVisibilityChanged() {
+			if (document.hidden || document.mozHidden || document.webkitHidden || document.msHidden)
+				cr_setSuspended(true);
+			else
+				cr_setSuspended(false);
+		};
+		
+		document.addEventListener("visibilitychange", onVisibilityChanged, false);
+		document.addEventListener("mozvisibilitychange", onVisibilityChanged, false);
+		document.addEventListener("webkitvisibilitychange", onVisibilityChanged, false);
+		document.addEventListener("msvisibilitychange", onVisibilityChanged, false);
+		
+    </script>
+</body> 
+</html> 
