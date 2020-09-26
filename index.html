@@ -1,21 +1,15 @@
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+<meta name="viewport" content="initial-scale=0.1, maximum-scale=0.1, minimum-scale=0.1, user-scalable=no, minimal-ui" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-<div style="height:100px">Our element that prevents navigation</div>
 
-<script>
-const element = document.querySelector('div');
 
-element.addEventListener('touchstart', (e) => {
-    // prevent swipe to navigate gesture
-    e.preventDefault();
-});
-</script>
+
 
 <title>DJ Dangerous Raj Desai - Album 5 for $19.99 on Google Play, Bandcamp, Juno Download, and more</title>
-<style type="text/css">
+<style>
 body {
    
 	background-color: #4e3e31;
@@ -23,29 +17,36 @@ body {
 	margin-top: 0px;
 	margin-right: 0px;
 	margin-bottom: 0px;
-	background-image:url(bg3.jpg);
+	background-image:url(bg3.jpg); 
 	background-position: center top;
 	background-repeat:no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
+	 
 }
 #GAMEcontent{
 	margin-top: 60px;
 	margin-bottom: 60px;
 	position:relative;
 	background-attachment: fixed;
+ 
 	
 }
 #game {
-	border-style:solid;
-	border-width: 10px;
+	border-style:none;
+	border-width: 0px;
 	border-color:#000;
 	color: #000;
-	margin: auto;
-	width: 480px;
-	position:relative;
-	z-index: 9999999;
-	  background-attachment: fixed; 
+	margin: 0 0 0 0;
+  z-index: 9999999;
+	background-attachment: fixed;
+  position: fixed; 
+  right: 0; 
+  bottom: 0; 
+  left: 0;
+  top: 0;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: hidden;
 }
 </style>
 <style>
@@ -77,24 +78,40 @@ body {
 
 </style>
 
-
 </head>
 
 <body>
-
-
-
-<center>
-<div id="GAMEcontent">
-    <div id="game">
-    <iframe frameborder="0" src="game/index.html" width="480px" height="720px"></iframe>
-    </div>
-</div>
-</center>
-
+<header>
+<iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/track=2758092559/size=small/bgcol=ffffff/linkcol=f171a2/transparent=true/" seamless><a href="https://djdangerous.bandcamp.com/track/edm-1-album-5-megamix-vol-3">EDM 1 - Album 5 Megamix, Vol.3 by dj dangerous raj desai</a></iframe>
+</header>
 <center>
 <a href="game/index.html" target="_parent" class="button1001">Switch to Fullscreen Game</a>
 </center>
+
+
+<div id="GAMEcontent" >
+    <div id="game" class="game">
+    <iframe frameborder="0" src="game/index.html" min-width="100%" min-height="100%"></iframe>
+ 
+    </div>
+</div>
+
+<style>
+.game {
+  position: fixed; 
+  right: 0; 
+  bottom: 0; 
+  left: 0;
+  top: 0;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
+}
+
+.game iframe {
+  height: 100%;
+  width: 100%;
+}
+</style>
 
 </body>
 </html>
