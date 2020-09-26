@@ -1,9 +1,10 @@
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=0.1, maximum-scale=0.1, minimum-scale=0.1, user-scalable=no, minimal-ui" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-<div style="height:100px">Our element that prevents navigation</div>
+
 
 <script>
 const element = document.querySelector('div');
@@ -28,12 +29,14 @@ body {
 	background-repeat:no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
+	overflow: hidden;
 }
 #GAMEcontent{
 	margin-top: 60px;
 	margin-bottom: 60px;
 	position:relative;
 	background-attachment: fixed;
+	overflow: hidden;
 	
 }
 #game {
@@ -45,7 +48,8 @@ body {
 	width: 480px;
 	position:relative;
 	z-index: 9999999;
-	  background-attachment: fixed; 
+	background-attachment: fixed;
+	overflow: hidden;
 }
 </style>
 <style>
@@ -82,19 +86,19 @@ body {
 
 <body>
 
-
+<center>
+<a href="game/index.html" target="_parent" class="button1001">Switch to Fullscreen Game</a>
+</center>
 
 <center>
 <div id="GAMEcontent">
     <div id="game">
-    <iframe frameborder="0" src="game/index.html" width="480px" height="720px"></iframe>
+    <iframe frameborder="0" src="game/index.html" width="480px" height="100%"></iframe>
     </div>
 </div>
 </center>
 
-<center>
-<a href="game/index.html" target="_parent" class="button1001">Switch to Fullscreen Game</a>
-</center>
+
 
 </body>
 </html>
